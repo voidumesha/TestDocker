@@ -8,6 +8,12 @@ app.get('/', (req, res) => {
     console.log('Received a GET request', req);
     res.send('Hello, World!');
 });
+// Define a POST endpoint
+app.post('/submit', (req, res) => {
+    console.log('Received a POST request', req.body);
+    res.send('POST request received!');
+});
+
 
 // Start the server
 app.listen(port, () => {
